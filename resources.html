@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="icon" type="image/png" href="https://i.ibb.co/yy7sFg1/logo48.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        section {
+            padding: 60px 0;
+        }
+        .resources ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .resources li {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4 thepx 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-group {
+            margin-top: 10px;
+        }
+        .modal-body {
+            height: 80vh;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        #pdf-iframe {
+            width: 100%;
+            height: 100%;
+        }
+        h2, h4 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .navbar-brand, .nav-link {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .container {
+            max-width: 960px;
+        }
+         body {
+    background-color: #ffead6;
+}
+       .jumbotron {
+                       background-color: #e9ecef;
+                                   border: 2px solid #6c757d;
+                                           }
+                                                   .footer {
+                                                               background-color: #343a40;
+                                                                       }
+                                                                               .footer .text-muted {
+                                                                                           color: #ffffff !important;
+                                                                                                   }
+                                                                                                           .logo {
+                                                                                                                       width: 100px;
+                                                                                                                                   height: auto;
+                                                                                                                                               display: block;
+                                                                                                                                                           margin: 0 auto;
+                                                                                                                                                                   }
+                                                                                                                                                                           .whatsapp-button {
+                                                                                                                                                                                       position: fixed;
+                                                                                                                                                                                                   bottom: 20px;
+                                                                                                                                                                                                               right: 20px;
+                                                                                                                                                                                                                           background-color: #25D366;
+                                                                                                                                                                                                                                       color: white;
+                                                                                                                                                                                                                                                   border-radius: 50%;
+                                                                                                                                                                                                                                                               padding: 15px;
+                                                                                                                                                                                                                                                                           font-size: 20px;
+                                                                                                                                                                                                                                                                                       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                                                                                                                                                                                                                                                                                                   display: flex;
+                                                                                                                                                                                                                                                                                                               justify-content: center;
+                                                                                                                                                                                                                                                                                                                           align-items: center;
+                                                                                                                                                                                                                                                                                                                                       z-index: 1000;
+                                                                                                                                                                                                                                                                                                                                               }
+       } </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Riteshhh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="resources">
+        <div class="container">
+            <h2>Resources</h2>
+            <div class="resources">
+                <ul>
+                    <li>
+                        <h4>Document 1</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#docModal" data-src="https://pdfobject.com/pdf/sample.pdf">View</button>
+                            <a href="https://pdfobject.com/pdf/sample.pdf" target="_blank" class="btn btn-secondary">Download</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Document 2</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#docModal" data-src="URL_FOR_DOCUMENT_2">View</button>
+                            <a href="URL_FOR_DOCUMENT_2" target="_blank" class="btn btn-secondary">Download</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Document 3</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#docModal" data-src="URL_FOR_DOCUMENT_3">View</button>
+                            <a href="URL_FOR_DOCUMENT_3" target="_blank" class="btn btn-secondary">Download</a>
+                        </div>
+                    </li>
+                    <!-- Add more documents here as needed -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="docModal" tabindex="-1" role="dialog" aria-labelledby="docModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="docModalLabel">Document Viewer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="pdf-viewer">
+                        <iframe id="pdf-iframe" src="" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $('#docModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var src = button.data('src');
+            var iframe = document.getElementById('pdf-iframe');
+            iframe.src = src;
+        });
+
+        $('#docModal').on('hidden.bs.modal', function () {
+            var iframe = document.getElementById('pdf-iframe');
+            iframe.src = '';
+        });
+    </script>
+                          <br>       <br>        <br>       <br>    <br>       <br>                        <br>       <br>               <footer class="footer mt-auto py-3">
+                                                                            <div class="container">
+                                                                                        <span class="text-muted">All Rights reserved. Powered by Ritesh & GPT-4o</span>
+                                                                                                </div>
+                                                                                                    </footer>
+
+                                                                       I                                  <a href="https://wa.me/7008749018" class="whatsapp-button">
+                                                                                                                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+                                                                                                                    </a>
+
+                                                                                                                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                                                                                                                            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+                                                                                                                                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

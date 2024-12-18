@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/yy7sFg1/logo48.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riteshhh</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <style>
+        .logo {
+                        width: 100px; /* Adjust the size as needed */
+                                    height: 100px; /* Adjust the size as needed */
+                                                animation: rotate 4s linear infinite; /* 2s rotation + 2s pause */
+                                                        }
+
+                                                                @keyframes rotate {
+                                                                            0% {
+                                                                                            transform: rotate(0deg);
+                                                                                                        }
+                                                                                                                    50% {
+                                                                                                                                    transform: rotate(360deg);
+                                                                                                                                                }
+                                                                                                                                                            100% {
+                                                                                                                                                                            transform: rotate(360deg);
+                                                                                                                                                                                        }
+                                                                                                                                                                                                }
+        #countdown {
+    font-size: 24px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+        .body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-toggler {
+            border-color: rgb(240, 255, 255)
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .jumbotron {
+            background-color: #e9ecef;
+            border: 2px solid #6c757d;
+        }
+        .footer {
+            background-color: #343a40;
+        }
+        .footer .text-muted {
+            color: #ffffff !important;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .body {
+    background-color: #ffead6;
+}
+
+
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0 0 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer ul li {
+    display: inline;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #fff; /* White links */
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ccc; /* Optional: Light gray on hover */
+}
+
+
+
+
+/* Optional: Center align text in the modal body */
+.modal-body {
+    text-align: justify;
+}
+
+/* Optional: Add padding or custom styling to the footer links */
+footer a {
+    color: #007bff; /* Use Sketchy theme's primary color */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Riteshhh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resources.html">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <img src="https://i.ibb.co/BsMMmj2/logo.png" alt="Logo" class="logo"style="width: 50px; height: auto;">
+        <br>
+        <div class="jumbotron">
+            <h1 id="greeting"></h1>
+            <script>
+                // JavaScript code here
+                const greeting = document.getElementById("greeting");
+                const hours = new Date().getHours();
+                if (hours < 12) {
+                    greeting.textContent = "Good Morning!";
+                } else if (hours < 18) {
+                    greeting.textContent = "Good Afternoon!";
+                } else {
+                    greeting.textContent = "Good Evening!";
+                }
+            </script>
+            <!---<h1 class="display-4">Welcome</h1> -->
+            <p class="lead">Welcome to my personal website! Here, you'll find information about me, my work, and my interests. Feel free to explore and learn more about what I do.
+</p>
+            <hr class="my-4">
+            <p>Hi, I'm Ritesh, a passionate Explorer.  have worked on various projects related to Science & Tech/Other. In my free time, I enjoy Watching Webseries and Listening to music This website is a space where I share my work, thoughts, and ideas. Thank you for visiting!
+</p>
+            <a class="btn btn-primary btn-lg" href="insta.html" role="button">Instagram</a>
+        </div>
+
+      
+
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7qmvLmX9tyaTiBAVNI6YEn?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscrepen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6YBcbXDYIITuyCEN2YwGRy?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C1RTFR4Pf52/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/C1RTFR4Pf52/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C1RTFR4Pf52/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Ritésh (@ritesh_k__)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+
+
+<div class="embed-container">
+                                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with your YouTube video ID -->
+                                <iframe src="https://www.youtube.com/embed/8KvT3mv2l8I?si=b2DroQWA7qrJl9Fe"
+                                        frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+
+<div class="embed-container">
+                                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with your YouTube video ID -->
+                                <iframe src="https://www.youtube.com/embed/FMlRa2GV-bE?si=Z1gFv-bfeDYFJzVm&amp;controls=0"
+                                        frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+
+
+                      <!--  <div class="embed-container">
+                                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with your YouTube video ID 
+                                <iframe src="https://www.youtube.com/embed/At-lqpWSdLI?si=-Nz_7TOuXUcTEmbE&amp;start=136"
+                                        frameborder="0" allowfullscreen></iframe>
+                        </div> -->
+
+
+
+                        <blockquote class="twitter-tweet">
+                                <p lang="zxx" dir="ltr"><a href="https://t.co/4K2uYkXl0E">pic.twitter.com/4K2uYkXl0E</a>
+                                </p>&mdash; Ritesh Kumar (@_Ritesh_K_) <a
+                                        href="https://twitter.com/_Ritesh_K_/status/1821815892990480536?ref_src=twsrc%5Etfw">August
+                                        9, 2024</a>
+                        </blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <!--<div class="embed-container">
+                               
+                                <iframe src="https://www.youtube.com/embed/18nDrsoii5M?si=uDV2JBgqt4YVmELM&amp;start=117"
+                                        frameborder="0" allowfullscreen></iframe>
+                        </div> -->
+
+
+                     
+
+
+
+
+<!-- Bootstrap and Bootswatch Sketchy CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/sketchy/bootstrap.min.css">
+
+<!-- Accordion Section -->
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Know More about me...</h2>
+    <div class="accordion" id="accordionExample">
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   Tech Journey
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong></strong> 
+                    I used to make 3d models in blender in 2019 ig.<br>
+                   Afew years ago I used to host & run Minecraft servers on both VPS and my local server (Desktop).<br>
+                   I started learning HTML & CSS  aswell as MySQL and PHP in 2020,<br> I had made many websites as i liked,<br>
+               I had made a few websites for building PCs, and affiliated buying site. I also had made websites for our Minecraft server www.budgetcraft.tk,<br>
+          unfortunately these things dont exist currently,<br> Currently i am working for this website just for fun, I consider WebDev as it is just for fun 
+    but not as a profession.
+                </div>
+            </div>
+        </div>
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    YouTube Journey
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong></strong> I have been using YouTube since 2013,<br> Yes but as there was limited data so i had to use it wisely.<br>
+                    I started my own channel on YouTube in 2016,<br> At that time Technical things were very popular. 
+                    My channel was also based on Technology, the name was @RK ProTech i used to unbox Phones and other devices also sharing new device specs and news.
+                    but later on i closed that channel.<br> Unfortunately I also deleted all the videos and the channel. <br>
+                    in 2018, at that time vlogging was very popular,<br> i used to upload vlogs on my other channel: RTS Vlogs,<br> but unfortunately i have also deleted that channel.<br>
+                    In 2019 i made another channel to upload PC related content and for streaming <br>but don't worry it is still there but most of the videos have been deleted
+                </p> click <a href="https://www.youtube.com/@riteshb2211">here</a> to open my channel.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fun
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong></strong> I had been playing games since 2012.<br> 
+                    2 Favorite games are MAX PAYNE 2, Life is strange(all)<br>
+               Some of the first Multiplayer games i had played are Counter-Strike:CZ & CS:S<br>
+            Some of the first Open world games i played: GTA 3, GTA:VC, GTA:SA  then later on i played GTA:V & Watch Dogs 1 ,2 & Legion.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Movies
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Movies</strong> I mostly watch thriller or horror movies and series <br>but i also have enjoyed watching comedy movies of 90's but not the movies released after 00's in india.
+                    Nowadays i just watch Horror and thriller movies for enjoyment such as Haunting of the hill house, All Of Us Are Dead(waiting for part 2), House of ushers, Mid Night Mass, Kingdom, Train to Busan etc
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+     <!--   
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Know More About me</h2>
+                <p>I am into these techy (both software & hardware) things from my childhood.
+                    I used to make 3d models in blender in 2019 ig.
+                Afew years ago I used to host & run Minecraft servers on both VPS and my local server (Desktop).
+                I started learning HTML & CSS  aswell as MySQL and PHP in 2020, I had made many websites as i liked,
+            I had made a few websites for building PCs, and affiliated buying site. I also had made websites for our Minecraft server www.budgetcraft.tk,
+        unfortunately these things doesnt exist currently, Currently i am working for this website just for fun, I consider WebDev as it is just for fun 
+    but not as a profession. </p>
+                <a class="btn btn-secondary" href="about.html" role="button">View details »</a>
+            </div>
+
+ <div class="col-lg-4">
+                <h2>YouTube Journey</h2>
+                <p>I have been using YouTube since 2013, Yeah but as there was limited data so i had to use it wisely.
+                    I started my own channel on YouTube in 2016, At that time Technical things were very popular. 
+                    My channel was also based on Technology, the name was @RK ProTech i used to unbox Phones and other devices also sharing new device specs and news.
+                    but later on i closed that channel. Unfortunately I also deleted all the videos and the channel. 
+                    in 2018, at that time vlogging was very famous, i used to upload vlogs on my another channel: RTS Vlogs, but unfortunately i have also deleted that channel.
+                    In 2019 i made another channel to upload PC related content and for streaming but don't worry it is still there but most of the videos have been deleted
+                </p> click <a href="https://www.youtube.com/@riteshb2211">here</a> to open my channel.
+                <a class="btn btn-secondary" href="#" role="button">View details »</a>
+            </div>
+        </div> 
+
+            <div class="col-lg-4">
+                <h2>hmm..</h2>
+                <p>I had been playing games since 2012. 
+                    2 Favorite games are MAX PAYNE 2, Life is strange(all)
+                First Multiplayer games i played are Counter-Strike:CZ & CS:S
+            Some of the first Open world games i played: GTA 3, GTA:VC, GTA:SA  then later on i played GTA:V & Watch Dogs 1 ,2 & Legion. </p>
+                <a class="btn btn-secondary" href="#" role="button">View details »</a>
+            </div>
+           -->
+<br><br>
+<h2>Countdown to My Birthday!</h2>
+<p id="countdown"></p>
+<script>
+    // Set your birthday date (adjust the year if your birthday this year has already passed)
+const birthday = new Date("2025-11-22T00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = birthday - now;
+
+    if (timeLeft < 0) {
+        document.getElementById("countdown").textContent = "Happy Birthday!";
+        clearInterval(timer); // Stop the countdown once the date has passed
+        return;
+    }
+
+    // Calculate time components
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // Display the countdown
+    document.getElementById("countdown").textContent =
+        `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+}
+
+// Update the countdown every second
+const timer = setInterval(updateCountdown, 1000);
+updateCountdown(); // Call once immediately to avoid delay
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Added Card Component -->
+        <div class="card mt-4" style="width: 18rem;">
+         <!-- <img src="https://i.ibb.co/vP0TCk7/LMC-20240621-173743.jpg" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This site is under development. There will be many features in this website.
+                But i am still figuring out what to add in this site, i mean, on what context this website is based on.
+                Currently I consider this site as a Portfolio as well as Personal site.
+                
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+    </div>
+    
+    <br>
+     <section id="contact">
+        <div class="container">
+            
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out. You can contact me via [your preferred method of contact, e.g., email, phone, social media].</p>
+            <a href="https://wa.me/7008749018" class="btn btn-success" target="_blank">Message Me on WhatsApp</a>
+        </div>
+    </section>
+    <br>
+
+    <p>Can you find the hidden surprise?</p>
+<div id="easter-egg" style="width: 30px; height: 30px; background-color: red; cursor: pointer;"></div>
+<p id="message" style="display:none;">You found the easter egg!</p>
+<script>
+    document.getElementById("easter-egg").addEventListener("click", function() {
+    document.getElementById("message").style.display = "block";
+});
+
+</script>
+
+
+
+
+
+<footer class="text-center p-3" style="background-color: #000203;">
+    <p>&copy; 2024 Riteshhh. All Rights Reserved.</p>
+    <p> Site designed and developed by <a href="https://www.instagram.com/ritesh_k__/" data-bs-toggle="modal" data-bs-target="#detailsModal"> Ritesh</a></p>
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true" style="color: #000000;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">About Me</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Profile Image -->
+                    <img src="https://i.ibb.co/K2G9nTX/Whats-App-Image-2024-11-25-at-19-59-42-1.jpg" alt="Your Name" class="img-thumbnail mb-3" style="width: 150px; height: 150px; border-radius: 50%;">
+                    
+                    <!-- Name -->
+                    <h4>Ritesh</h4>
+                    
+                    <!-- Description -->
+                    <p>
+                        Hi, I’m Ritesh.
+                        Feel free to explore my site and get in touch.
+                    </p>
+                    
+                    <!-- Additional Details -->
+                    <ul class="list-unstyled">
+                        <li><strong>Email:</strong> riteshb2211@gmail.com</li>
+                        <li><strong>Phone:</strong> +91 7008749018</li>
+                        <li><strong>Location:</strong> Berhampur, Odisha, India</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 text-end">
+        Powered by:
+        <a href="https://ifastnet.com//" title="iFastNet Premium Hosting" rel="nofollow" onclick="ga('send', 'event', 'premium', 'exit', 'homepage-footer')">
+            iFastNet Premium Hosting
+        </a>
+    </div>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="index.html">Home</a></li>
+        <li class="list-inline-item"><a href="about.html">About</a></li>
+        <li class="list-inline-item"><a href="projects.html">Projects</a></li>
+        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+        <!-- Privacy Policy Trigger -->
+        <li class="list-inline-item">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+        </li>
+    </ul>
+
+
+<!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true" style="color: #000000;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Your privacy is critically important to us, and we are committed to protecting any information you share with us.
+                </p>
+                <h6>Information We Collect</h6>
+                <p>
+                    When you contact us via phone, WhatsApp, or email, the following information may be shared with us:
+                    <ul>
+                       Your phone number and display picture (if applicable on WhatsApp).<br>
+                       Your email address and any information included in your message.
+                    </ul>
+                </p>
+                <p>
+                    This information is used solely to respond to your queries or requests and will not be shared with any third parties without your consent.
+                </p>
+            
+                <h5>Mutual Respect for Privacy</h5>
+                <p>
+                    By contacting us, you agree to respect our privacy and dignity. This includes:
+                    <ul>
+                        Avoiding any form of harassment or inappropriate communication.<br>
+                        Not sharing our personal contact details, messages, or other correspondence without permission.
+                    </ul>
+                </p>
+                <p>
+                    We reserve the right to block or report individuals who engage in inappropriate or disrespectful behavior.
+                </p>
+            
+                <h5>Cookies and Tracking</h5>
+                <p>
+                    Our website may use cookies to enhance your browsing experience. Cookies are small data files that help us:
+                    <ul>
+                        Understand how visitors interact with our site.<br>
+                        Improve the website's functionality and design.
+                    </ul>
+                    By using this site, you agree to our use of cookies as described.
+                </p>
+            
+                <h5>Your Rights</h5>
+                <p>
+                    You have the right to:
+                    <ul>
+                        <li>Request information about any data we have collected about you.</li>
+                        <li>Request that your data be deleted from our records.</li>
+                    </ul>
+                    For any such requests, please reach out to us via the <a href="contact.html">Contact</a> page.
+                </p>
+            
+                <h5>Changes to This Policy</h5>
+                <p>
+                    We may update this privacy policy from time to time. Any changes will be reflected on this page, so we encourage you to review it periodically.
+                </p>
+            
+                <h5>Contact Us </h5>
+                <p>
+                    If you have any questions or concerns about our Privacy Policy, feel free to reach out through:
+                    <ul>
+                        <li>Email: riteshb2211@gmail.com</li>
+                        <li>Phone: 7008749018</li>
+                        <li>WhatsApp: 7008749018</li>
+                    </ul>
+                </p>
+                <p>
+                    Thank you for respecting our privacy and trusting us with your communication.
+                </p>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+</footer>
+
+
+
+
+
+
+
+    <!--<footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">   <p>&copy; 2024 Riteshh. All Rights Reserved.
+              <br>
+               
+            </p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul></span>
+        </div>
+    </footer>-->
+ 
+
+
+
+
+
+    <a href="https://wa.me/7008749018" class="whatsapp-button">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

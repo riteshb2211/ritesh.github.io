@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="icon" type="image/png" href="https://i.ibb.co/yy7sFg1/logo48.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        section {
+            padding: 60px 0;
+        }
+        .gallery-item {
+            margin-bottom: 30px;
+        }
+        .gallery-item img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: auto;
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .filter-buttons button {
+            margin: 5px;
+        }
+        h2 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .navbar-brand, .nav-link {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+         body {
+    background-color: #ffead6;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Riteshhh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="filter-buttons">
+                <button class="btn btn-outline-primary" onclick="filterSelection('all')"> Show All</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('category1')"> Category 1</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('category2')"> Category 2</button>
+                <button class="btn btn-outline-primary" onclick="filterSelection('category3')"> Category 3</button>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category2">
+                    <a href="https://i.ibb.co/3mYbxSg/Whats-App-Image-2024-11-25-at-20-18-58.jpg" data-lightbox="gallery" data-title="Image 2">
+                        <img src="https://i.ibb.co/3mYbxSg/Whats-App-Image-2024-11-25-at-20-18-58.jpg" alt="Image 2">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category1">
+                    <a href="https://i.ibb.co/vdTpvtB/Whats-App-Image-2024-11-25-at-19-59-42-1.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="https://i.ibb.co/vdTpvtB/Whats-App-Image-2024-11-25-at-19-59-42-1.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category2">
+                    <a href="https://i.ibb.co/v4Nx1j0/Whats-App-Image-2024-11-25-at-19-59-42.jpg" data-lightbox="gallery" data-title="Image 2">
+                        <img src="https://i.ibb.co/v4Nx1j0/Whats-App-Image-2024-11-25-at-19-59-42.jpg" alt="Image 2">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category3">
+                    <a href="https://i.ibb.co/VBcQYdB/Whats-App-Image-2024-11-25-at-19-59-43.jpg" data-lightbox="gallery" data-title="Image 3">
+                        <img src="https://i.ibb.co/VBcQYdB/Whats-App-Image-2024-11-25-at-19-59-43.jpg" alt="Image 3">
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category1">
+                    <a href="https://i.ibb.co/L1M7XtF/Whats-App-Image-2024-11-25-at-19-59-44-1.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="https://i.ibb.co/L1M7XtF/Whats-App-Image-2024-11-25-at-19-59-44-1.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category2">
+                    <a href="https://i.ibb.co/CP0QDSK/Whats-App-Image-2024-11-25-at-19-59-44.jpg" data-lightbox="gallery" data-title="Image 2">
+                        <img src="https://i.ibb.co/CP0QDSK/Whats-App-Image-2024-11-25-at-19-59-44.jpg" alt="Image 2">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category3">
+                    <a href="https://i.ibb.co/GTFQnMv/Whats-App-Image-2024-11-25-at-19-59-45.jpg" data-lightbox="gallery" data-title="Image 3">
+                        <img src="https://i.ibb.co/GTFQnMv/Whats-App-Image-2024-11-25-at-19-59-45.jpg" alt="Image 3">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category1">
+                    <a href="https://i.ibb.co/Gkx0d7B/Whats-App-Image-2024-11-25-at-20-09-49.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="https://i.ibb.co/Gkx0d7B/Whats-App-Image-2024-11-25-at-20-09-49.jpg" alt="Image 1">
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item category3">
+                    <a href="https://via.placeholder.com/600" data-lightbox="gallery" data-title="Image 3">
+                        <img src="https://via.placeholder.com/600" alt="Image 3">
+                    </a>
+                </div>
+                <!-- Add more images here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center p-3" style="background-color: #e1c6f1;">
+        <p>&copy; 2024 Riteshhh. All Rights Reserved.</p>
+        <p> Site designed and developed by <a href="https://www.instagram.com/ritesh_k__/" data-bs-toggle="modal" data-bs-target="#detailsModal"> Ritesh</a></p>
+        <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true" style="color: #000000;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detailsModalLabel">About Me</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- Profile Image -->
+                        <img src="https://i.ibb.co/K2G9nTX/Whats-App-Image-2024-11-25-at-19-59-42-1.jpg" alt="Your Name" class="img-thumbnail mb-3" style="width: 150px; height: 150px; border-radius: 50%;">
+                        
+                        <!-- Name -->
+                        <h4>Ritesh</h4>
+                        
+                        <!-- Description -->
+                        <p>
+                            Hi, I’m Ritesh.
+                            Feel free to explore my site and get in touch.
+                        </p>
+                        
+                        <!-- Additional Details -->
+                        <ul class="list-unstyled">
+                            <li><strong>Email:</strong> riteshb2211@gmail.com</li>
+                            <li><strong>Phone:</strong> +91 7008749018</li>
+                            <li><strong>Location:</strong> Berhampur, Odisha, India</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 text-end">
+            Powered by:
+            <a href="https://ifastnet.com//" title="iFastNet Premium Hosting" rel="nofollow" onclick="ga('send', 'event', 'premium', 'exit', 'homepage-footer')">
+                iFastNet Premium Hosting
+            </a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a href="about.html">About</a></li>
+            <li class="list-inline-item"><a href="projects.html">Projects</a></li>
+            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+            <!-- Privacy Policy Trigger -->
+            <li class="list-inline-item">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+            </li>
+        </ul>
+    
+    
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true" style="color: #000000;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Your privacy is critically important to us, and we are committed to protecting any information you share with us.
+                    </p>
+                    <h6>Information We Collect</h6>
+                    <p>
+                        When you contact us via phone, WhatsApp, or email, the following information may be shared with us:
+                        <ul>
+                           Your phone number and display picture (if applicable on WhatsApp).<br>
+                           Your email address and any information included in your message.
+                        </ul>
+                    </p>
+                    <p>
+                        This information is used solely to respond to your queries or requests and will not be shared with any third parties without your consent.
+                    </p>
+                
+                    <h5>Mutual Respect for Privacy</h5>
+                    <p>
+                        By contacting us, you agree to respect our privacy and dignity. This includes:
+                        <ul>
+                            Avoiding any form of harassment or inappropriate communication.<br>
+                            Not sharing our personal contact details, messages, or other correspondence without permission.
+                        </ul>
+                    </p>
+                    <p>
+                        We reserve the right to block or report individuals who engage in inappropriate or disrespectful behavior.
+                    </p>
+                
+                    <h5>Cookies and Tracking</h5>
+                    <p>
+                        Our website may use cookies to enhance your browsing experience. Cookies are small data files that help us:
+                        <ul>
+                            Understand how visitors interact with our site.<br>
+                            Improve the website's functionality and design.
+                        </ul>
+                        By using this site, you agree to our use of cookies as described.
+                    </p>
+                
+                    <h5>Your Rights</h5>
+                    <p>
+                        You have the right to:
+                        <ul>
+                            <li>Request information about any data we have collected about you.</li>
+                            <li>Request that your data be deleted from our records.</li>
+                        </ul>
+                        For any such requests, please reach out to us via the <a href="contact.html">Contact</a> page.
+                    </p>
+                
+                    <h5>Changes to This Policy</h5>
+                    <p>
+                        We may update this privacy policy from time to time. Any changes will be reflected on this page, so we encourage you to review it periodically.
+                    </p>
+                
+                    <h5>Contact Us </h5>
+                    <p>
+                        If you have any questions or concerns about our Privacy Policy, feel free to reach out through:
+                        <ul>
+                            <li>Email: riteshb2211@gmail.com</li>
+                            <li>Phone: 7008749018</li>
+                            <li>WhatsApp: 7008749018</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Thank you for respecting our privacy and trusting us with your communication.
+                    </p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+        
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        function filterSelection(category) {
+            var items, i;
+            items = document.getElementsByClassName("gallery-item");
+            if (category == "all") category = "";
+            for (i = 0; i < items.length; i++) {
+                if (items[i].className.indexOf(category) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+        filterSelection("all"); // Show all items by default
+    </script>
+</body>
+</html>
